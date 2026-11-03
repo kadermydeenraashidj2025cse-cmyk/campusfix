@@ -31,8 +31,6 @@ dist-ssr
 # Local database and private configuration
 campusfix_db.json
 application.properties
-firebase-applet-config.json
-firebase-blueprint.json
 
 # AI Studio metadata
 *.metadata.json

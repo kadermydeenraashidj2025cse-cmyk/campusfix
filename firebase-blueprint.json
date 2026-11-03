@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile in the campus management system",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["STUDENT", "ADMIN", "STAFF"] },
+        "department": { "type": "string" },
+        "phone": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "email", "role"]
+    },
+    "Complaint": {
+      "title": "Complaint",
+      "description": "Campus maintenance complaint record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "formatted_id": { "type": "string" },
+        "complaint_title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "priority": { "type": "string", "enum": ["Low", "Medium", "High", "Critical"] },
+        "status": { "type": "string", "enum": ["Submitted", "Under Review", "Assigned", "In Progress", "Resolved", "Rejected", "Reopened", "Cancelled"] },
+        "created_at": { "type": "string" }
+      },
+      "required": ["complaint_title", "category", "location", "priority"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "Message entry in user AI chat thread",
+      "type": "object",
+      "properties": {
+        "role": { "type": "string", "enum": ["user", "model", "assistant"] },
+        "text": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["role", "text"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents"
+    },
+    "/complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "Maintenance complaints"
+    },
+    "/chat_threads/{userId}/messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "AI chatbot conversation messages"
+    }
+  }
+}
