@@ -386,3 +386,5 @@ The database is managed with **Flyway** in `backend/src/main/resources/db/migrat
 - **Institution:** Rajalakshmi Engineering College
 - **Developer:** Harikrishna G M (`harikrishna.gm.2025.aids@rajalakshmi.edu.in`)
 - **System:** CampusFix & CampusFind AI Management System
+#   c a m p u s f i x  
+ 
