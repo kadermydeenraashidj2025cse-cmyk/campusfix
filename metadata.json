@@ -1,6 +1,6 @@
 {
   "name": "CampusFix",
-  "description": "Smart Campus Maintenance Complaint Management System",
+  "description": "Integrated Campus Management & Lost and Found System",
   "permissions": [],
   "capabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

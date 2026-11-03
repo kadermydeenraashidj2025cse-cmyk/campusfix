@@ -123,7 +123,7 @@ export const AuthProvider = ({ children }) => {
   const signInWithGoogle = async (preferredRole = 'STUDENT') => {
     try {
       localStorage.setItem('campusfix_selected_role', preferredRole);
-      await signInWithRedirect(auth, googleProvider);
+      return await signInWithPopup(auth, googleProvider);
     } catch (err) {
       console.error('Google Sign-In failed:', err);
       throw err;

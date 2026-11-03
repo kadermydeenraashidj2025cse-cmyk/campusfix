@@ -12,6 +12,7 @@ service cloud.firestore {
 
     function isAdmin() {
       return isSignedIn() && (
+        request.auth.token.email == 'kadermydeenraashid.j.2025.cse@rajalakshmi.edu.in' ||
         request.auth.token.email == 'harikrishna.gm.2025.aids@rajalakshmi.edu.in' ||
         request.auth.token.email == 'admin@campusfix.edu'
       );
